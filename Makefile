@@ -1,3 +1,5 @@
+.PHONY: test test-unit lint
+
 test:
 	uv run pytest tests/
 

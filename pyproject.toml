@@ -11,6 +11,7 @@ workfleet = "workfleet:main"
 
 [dependency-groups]
 dev = [
+    "import-linter>=2.16",
     "pyright>=1.1.414",
     "pytest>=9.2.0",
     "ruff>=0.17.4",
@@ -40,3 +41,19 @@ pythonVersion = "3.13"
 venvPath = "."
 venv = ".venv"
 include = ["src", "tests"]
+
+[tool.importlinter]
+root_package = "workfleet"
+
+[[tool.importlinter.contracts]]
+id = "clean-architecture"
+name = "Clean architecture layers"
+type = "layers"
+containers = ["workfleet"]
+layers = [
+    "web_api",
+    "infrastructure",
+    "application",
+    "domain",
+]
+exhaustive = true

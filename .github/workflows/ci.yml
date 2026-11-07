@@ -27,8 +27,8 @@ jobs:
       - name: Type Check
         run: uv run pyright
 
-      - name: Architecture Tests
-        run: uv run pytest tests/architecture
+      - name: Architecture
+        run: uv run lint-imports
 
       - name: Unit Tests
         run: uv run pytest tests/unit

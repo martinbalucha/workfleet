@@ -4,17 +4,22 @@ version = "0.1.0"
 description = "Agent workflow sample"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "fastapi>=0.162.2",
+    "mangum>=0.22.0",
+]
 
 [project.scripts]
 workfleet = "workfleet:main"
 
 [dependency-groups]
 dev = [
+    "httpx2>=2.16.0",
     "import-linter>=2.16",
     "pyright>=1.1.414",
     "pytest>=9.2.0",
     "ruff>=0.17.4",
+    "uvicorn>=0.54.0",
 ]
 
 [build-system]

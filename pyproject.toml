@@ -11,6 +11,7 @@ workfleet = "workfleet:main"
 
 [dependency-groups]
 dev = [
+    "pyright>=1.1.414",
     "pytest>=9.2.0",
     "ruff>=0.17.4",
 ]
@@ -32,3 +33,10 @@ known-first-party = ["workfleet"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+pythonVersion = "3.13"
+venvPath = "."
+venv = ".venv"
+include = ["src", "tests"]

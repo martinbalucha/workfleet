@@ -1,4 +1,4 @@
-.PHONY: test test-unit lint typecheck
+.PHONY: test test-unit lint quality-check
 
 test:
 	uv run pytest tests/
@@ -10,5 +10,6 @@ lint:
 	uv run ruff format src/ tests/
 	uv run ruff check --fix src/ tests/
 
-typecheck:
+quality-check:
 	uv run pyright
+	uv run lint-imports

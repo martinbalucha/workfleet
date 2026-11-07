@@ -1,0 +1,2 @@
+class CreateToolsetRequest:
+    pass

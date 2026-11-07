@@ -226,7 +226,7 @@ __marimo__/
 /workspace.xml
 # Markdown personal settings
 /markdown.xml
-# Editor-based HTTP Client requests
+# Editor-based HTTP Client dtos
 /httpRequests/
 # Ignored default folder with query files
 /queries/

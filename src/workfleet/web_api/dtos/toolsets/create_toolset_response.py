@@ -1,0 +1,2 @@
+class CreateToolsetResponse:
+    pass
